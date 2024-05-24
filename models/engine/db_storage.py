@@ -60,7 +60,7 @@ class DBStorage:
 
     def count(self, cls=None):
         """Counting numbers of objects in storage based on the class"""
-        return len(self.all())
+        return len(self.all(cls))
 
     def new(self, obj):
         """add the object to the current database session"""

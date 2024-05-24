@@ -45,7 +45,7 @@ class FileStorage:
 
     def count(self, cls=None):
         """count numbers of objects in storage based on class"""
-        return len(self.all())
+        return len(self.all(cls))
 
     def new(self, obj):
         """sets in __objects the obj with key <obj class name>.id"""
