@@ -156,7 +156,11 @@ No known bugs at this time.
 ## Authors
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)
+Kehinde Dada - [Github](https://github.com/mainbosskay) / [X fka Twitter](https://x.com/kennyKayboss)
+Ahmed Sodiq - [Github](https://github.com/Olamilekan2017) / [X fka Twitter](https://x.com/olay_zartistry)
 
 Second part of Airbnb: Joann Vuong
+Third part of Airbnb: Kehinde Dada and Ahmed Sodiq
+
 ## License
 Public Domain. No copy write protection. 
