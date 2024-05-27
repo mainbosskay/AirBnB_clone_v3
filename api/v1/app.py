@@ -9,11 +9,11 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 """Flask web application instance"""
-apphost = getenv("HBNB_API_HOST", default="0.0.0.0")
-appport = int(getenv("HBNB_API_PORT", default=5000))
+app_host = getenv("HBNB_API_HOST", default="0.0.0.0")
+app_port = int(getenv("HBNB_API_PORT", default=5000))
 app.url_map.strict_slashes = False
 app.register_blueprint(app_views)
-CORS(app, resources={"/*": {"origins": apphost}})
+CORS(app, resources={"/*": {"origins": app_host}})
 
 
 @app.teardown_appcontext
@@ -29,4 +29,4 @@ def page_404_error(error):
 
 
 if __name__ == "__main__":
-    app.run(host=apphost, port=appport, threaded=True)
+    app.run(host=app_host, port=app_port, threaded=True)
