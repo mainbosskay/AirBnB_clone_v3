@@ -38,7 +38,7 @@ class FileStorage:
         """Getting object based on class  and id"""
         if cls is not None:
             mtch_objs = [obj for obj in self.__objects.values()
-                        if type(obj) is cls and obj.id == id]
+                         if type(obj) is cls and obj.id == id]
             if mtch_objs:
                 return mtch_objs[0]
         return None
@@ -68,7 +68,7 @@ class FileStorage:
                 jo = json.load(f)
             for key in jo:
                 self.__objects[key] = classes[jo[key]["__class__"]](**jo[key])
-        except:
+        except Exception:
             pass
 
     def delete(self, obj=None):
