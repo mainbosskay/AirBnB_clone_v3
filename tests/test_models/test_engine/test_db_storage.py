@@ -105,7 +105,7 @@ class TestDBStorage(unittest.TestCase):
 
     def test_count(self):
         """Testing the count method"""
-         storage = models.storage
+        storage = models.storage
         self.assertIs(type(storage.count()), int)
         self.assertIs(type(storage.count(None)), int)
         self.assertIs(type(storage.count(int)), int)
