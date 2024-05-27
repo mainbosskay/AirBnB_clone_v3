@@ -8,7 +8,7 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-"""Flask web application instance"""
+"""Flask web application instance properties"""
 app_host = getenv("HBNB_API_HOST", default="0.0.0.0")
 app_port = int(getenv("HBNB_API_PORT", default=5000))
 app.url_map.strict_slashes = False
@@ -24,7 +24,7 @@ def close_storage(exception):
 
 @app.errorhandler(404)
 def page_404_error(error):
-    """Handling page with error 404"""
+    """Handling page with error 404 to display not found"""
     return jsonify(error="Not found"), 404
 
 

@@ -27,16 +27,16 @@ def get_Amenities(amenity_id=None):
     """Gets and retrieves all amenities or amenity based on ID"""
     amenity_objt = storage.all(Amenity).values()
     if amenity_id:
-        amenity_lists = list(filter(lambda k: k.id == amenity_id, amenity_objt))
+        amenity_lsts = list(filter(lambda k: k.id == amenity_id, amenity_objt))
         if amenity_list:
-            return make_response(jsonify(amenity_lists[0].to_dict()))
+            return make_response(jsonify(amenity_lsts[0].to_dict()))
         raise NotFound()
     amenity_objt = list(map(lambda k: k.to_dict(), amenity_objt))
     return make_response(jsonify(amenity_objt))
 
 
 def delete_Amenities(amenity_id=None):
-    """Deleting amenity object based on ID"""
+    """Deleting amenity object based on amenity ID"""
     amenity_objt = storage.all(Amenity).values()
     amenity_lists = list(filter(lambda k: k.id == amenity_id, amenity_objt))
     if amenity_lists:
@@ -47,7 +47,7 @@ def delete_Amenities(amenity_id=None):
 
 
 def post_Amenities(amenity_id=None):
-    """Posting/adding new amenity to object list"""
+    """Posting and adding new amenity to object list"""
     amenity_data = request.get_json()
     if type(amenity_data) is not dict:
         raise BadRequest(description="Not a JSON")
