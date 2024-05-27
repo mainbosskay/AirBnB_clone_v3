@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""The AirBnB API built with Flask web application"""
+"""
+The AirBnB API built with Flask web application
+"""
 from os import getenv
 from flask import Flask, jsonify
 from api.v1.views import app_views
